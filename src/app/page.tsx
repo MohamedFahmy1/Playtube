@@ -6,7 +6,7 @@ import Sidebar from "@/components/Sidebar";
 import Videos from "@/components/Videos";
 import { fetchFromAPI } from "@/utils/fetchFromApi";
 const Home = () => {
-  const [selectedCategory, setSelectedCategory] = useState("New");
+  const [selectedCategory, setSelectedCategory] = useState("Frontend");
   const [videos, setVideos] = useState<any>([]);
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
@@ -20,7 +20,7 @@ const Home = () => {
         sx={{ height: { sx: "auto", md: "92vh" } }}
         borderRight={"1px solid #3d3d3d"}
         px={{ sx: 0, md: 2 }}
-        width={{ md: "130px" }}
+        width={{ md: "220px" }}
       >
         <Sidebar
           selectedCategory={selectedCategory}

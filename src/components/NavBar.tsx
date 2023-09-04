@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -16,7 +16,22 @@ const NavBar = () => {
       bgcolor={"black"}
     >
       <Link href="/">
-        <Image src={logo} alt="logo" height={45} width={45} />
+        <Stack direction={"row"} alignItems={"center"}>
+          <Image src={logo} alt="logo" height={45} width={45} />
+          <Typography
+            variant={"h5"}
+            color="white"
+            ml={1}
+            sx={{
+              display: {
+                xs: "none",
+                sm: "block",
+              },
+            }}
+          >
+            Playtube
+          </Typography>
+        </Stack>
       </Link>
       <SearchBar />
     </Stack>

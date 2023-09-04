@@ -10,12 +10,11 @@ const SearchFeed = () => {
 
   const pathname = usePathname();
   const searchTerm = pathname.slice(8);
-  console.log(searchTerm);
   useEffect(() => {
-    fetchFromAPI(`search?part=snippet&q=dantes`).then((data) =>
+    fetchFromAPI(`search?part=snippet&q=${searchTerm}}`).then((data) =>
       setVideos(data.items)
     );
-  }, []);
+  }, [searchTerm]);
 
   return (
     <Box p={2} minHeight="95vh">

@@ -19,7 +19,8 @@ const VideoCard: React.FC<any> = ({
     <Card
       sx={{
         width: {
-          xs: "356px",
+          xs: "100%",
+          sm: "356px",
           md: "320px",
         },
         boxShadow: "none",
@@ -28,9 +29,9 @@ const VideoCard: React.FC<any> = ({
     >
       <Link href={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <CardMedia
-          image={snippet?.thumbnails?.high?.url}
+          image={`${snippet?.thumbnails?.high?.url}`}
           aria-label={snippet?.title}
-          sx={{ width: 358, height: 180 }}
+          sx={{ width: { xs: "100%", sm: "358px" }, height: 180 }}
         />
         <CardContent sx={{ backgroundColor: "#1e1e1e", height: "106px" }}>
           <Link href={videoId ? `/video/${videoId}` : demoVideoUrl}>

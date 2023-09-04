@@ -3,11 +3,14 @@ import React from "react";
 import VideoCard from "./VideoCard";
 import ChannelCard from "./ChannelCard";
 
-const Videos: React.FC<{ videos: [any] }> = ({ videos }) => {
-  console.log(videos);
+const Videos: React.FC<{ videos: [any]; direction?: any }> = ({
+  videos,
+  direction,
+}) => {
+  if (!videos?.length) return "Loading...";
   return (
     <Stack
-      direction={"row"}
+      direction={direction ? direction : "row"}
       flexWrap={"wrap"}
       justifyContent={"center"}
       gap={2}

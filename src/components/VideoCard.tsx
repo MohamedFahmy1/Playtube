@@ -4,7 +4,6 @@ import { CheckCircle } from "@mui/icons-material";
 import {
   demoChannelTitle,
   demoChannelUrl,
-  demoThumbnailUrl,
   demoVideoTitle,
   demoVideoUrl,
 } from "@/utils/constants";

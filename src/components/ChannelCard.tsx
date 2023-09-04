@@ -30,6 +30,7 @@ const ChannelCard: React.FC<{ channelDetail: any; marginTop?: string }> = ({
             justifyContent: "center",
             textAlign: "center",
             color: "#fff",
+            mx: "auto",
           }}
         >
           <CardMedia
@@ -43,6 +44,7 @@ const ChannelCard: React.FC<{ channelDetail: any; marginTop?: string }> = ({
               height: "180px",
               width: "180px",
               mb: 2,
+              mx: "auto",
               border: "1px solid #e3e3e3",
             }}
           />

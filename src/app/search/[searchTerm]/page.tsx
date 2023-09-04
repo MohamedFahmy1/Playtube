@@ -27,7 +27,10 @@ const SearchFeed = () => {
         ml={{ sm: "100px" }}
       >
         Search Results for{" "}
-        <span style={{ color: "#FC1503" }}>{searchTerm}</span> videos
+        <span style={{ color: "#FC1503" }}>
+          {searchTerm.replaceAll("%20", " ")}
+        </span>{" "}
+        videos
       </Typography>
       <Box display="flex">
         <Box sx={{ mr: { sm: "100px" } }} />

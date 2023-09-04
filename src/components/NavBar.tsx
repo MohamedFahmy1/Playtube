@@ -13,6 +13,7 @@ const NavBar = () => {
       position={"sticky"}
       top={0}
       justifyContent={"space-between"}
+      bgcolor={"black"}
     >
       <Link href="/">
         <Image src={logo} alt="logo" height={45} width={45} />

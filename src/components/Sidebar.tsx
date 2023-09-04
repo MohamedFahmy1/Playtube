@@ -2,8 +2,10 @@ import { categories } from "@/utils/constants";
 import { Stack } from "@mui/material";
 import React from "react";
 
-const selectedCategory = "New";
-const Sidebar = () => {
+const Sidebar: React.FC<{
+  selectedCategory: string;
+  setSelectedCategory: (name: string) => void;
+}> = ({ setSelectedCategory, selectedCategory }) => {
   return (
     <Stack
       direction={"row"}
@@ -15,6 +17,7 @@ const Sidebar = () => {
         <button
           key={category.name}
           className="category-btn"
+          onClick={() => setSelectedCategory(category.name)}
           style={{
             color: "white",
             background: category.name === selectedCategory ? "#fc1503" : "none",

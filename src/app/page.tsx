@@ -6,7 +6,7 @@ import Sidebar from "@/components/Sidebar";
 import Videos from "@/components/Videos";
 import { fetchFromAPI } from "@/utils/fetchFromApi";
 const Home = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Frontend");
+  const [selectedCategory, setSelectedCategory] = useState("Coding");
   const [videos, setVideos] = useState<any>([]);
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
